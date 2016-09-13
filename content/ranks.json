@@ -47,5 +47,311 @@
         "description": "Protect your squad of Troopers (can use E-Vac)."
       }
     ]
+  },
+  {
+    "rank": 3,
+    "title": "Lieutenant",
+    "description": "The most-common Officer rank in 3:16. The Lieutenant is the lowest ranking commissioned officer and has responsibility for several squads of Troopers. Lieutenants vary from raw and eager individuals brimming with lofty ideas and lacking experience, to grizzled veterans keen to stay close to their men in the field.",
+    "orders": [
+      {
+        "title": "Order 1",
+        "description": "Kill as many lifeforms as you can"
+      },
+      {
+        "title": "Order 2",
+        "description": "Maximize the kill ratio (bugs killed per Trooper)."
+      },
+      {
+        "title": "Order 3",
+        "description": "Follow directives issued by the Officers."
+      },
+      {
+        "title": "Order 4",
+        "description": "Protect your squad of Troopers (can use E-Vac)."
+      },
+      {
+        "title": "Order 5",
+        "description": "Ensure that no creatures in an encounter survive."
+      },
+      {
+        "title": "Order 6",
+        "description": "Enforce discipline on the lower ranks."
+      }
+    ]
+  },
+  {
+    "rank": 4,
+    "title": "Captain",
+    "description": "The Captain is in charge of a Company of troops. This normally means all troops on a single troop ship. This is the rank above Lieutenant and brave and intelligent officers hope to be promoted to this more senior rank. The rank of Captain is not without those who are foolish, headstrong and opinionated. This often leads to disastrous consequences for the troops in their command.",
+    "orders": [
+      {
+        "title": "Order 1",
+        "description": "Kill as many lifeforms as you can"
+      },
+      {
+        "title": "Order 2",
+        "description": "Maximize the kill ratio (bugs killed per Trooper)."
+      },
+      {
+        "title": "Order 3",
+        "description": "Follow directives issued by the Officers."
+      },
+      {
+        "title": "Order 4",
+        "description": "Protect your squad of Troopers (can use E-Vac)."
+      },
+      {
+        "title": "Order 5",
+        "description": "Ensure that no creatures in an encounter survive."
+      },
+      {
+        "title": "Order 6",
+        "description": "Enforce discipline on the lower ranks."
+      },
+      {
+        "title": "Order 7",
+        "description": "Ensure that no creatures on a planet survive."
+      },
+      {
+        "title": "Order 8",
+        "description": "Deliver Mission Briefings and plan assaults."
+      }
+    ]
+  },
+  {
+    "rank": 5,
+    "title": "Major",
+    "description": "The Major is in charge of an independent Company of troops and is responsible for senior missions of great importance. A Major is normally a veteran of harsh engagements in the field and has won many medals. His troops are the very best of the best, the elite of the elite, and are tasked with the toughest missions. The GM gets Threat Tokens equal to [Number of PCs x 6] for such missions.",
+    "orders": [
+      {
+        "title": "Order 1",
+        "description": "Kill as many lifeforms as you can"
+      },
+      {
+        "title": "Order 2",
+        "description": "Maximize the kill ratio (bugs killed per Trooper)."
+      },
+      {
+        "title": "Order 3",
+        "description": "Follow directives issued by the Officers."
+      },
+      {
+        "title": "Order 4",
+        "description": "Protect your squad of Troopers (can use E-Vac)."
+      },
+      {
+        "title": "Order 5",
+        "description": "Ensure that no creatures in an encounter survive."
+      },
+      {
+        "title": "Order 6",
+        "description": "Enforce discipline on the lower ranks."
+      },
+      {
+        "title": "Order 7",
+        "description": "Ensure that no creatures on a planet survive."
+      },
+      {
+        "title": "Order 8",
+        "description": "Deliver Mission Briefings and plan assaults."
+      },
+      {
+        "title": "Order 9",
+        "description": "Complete important missions as directed by senior ranks."
+      },
+      {
+        "title": "Order 10",
+        "description": "Never retreat."
+      }
+    ]
+  },
+  {
+    "rank": 6,
+    "title": "Lt Colonel",
+    "description": "Normally the highest ranking Officer in the field on a mission is a Lieutenant Colonel. They are superior in rank to the Major and report directly to the Colonels at Brigade HQ. They are sometimes simply called “Colonel” by troops in the field. They are possibly the highest rank that an ordinary Trooper will ever meet. The GM gets Threat Tokens equal to [Number of PCs x 7] when there is a Lt Col.",
+    "orders": [
+      {
+        "title": "Order 1",
+        "description": "Kill as many lifeforms as you can"
+      },
+      {
+        "title": "Order 2",
+        "description": "Maximize the kill ratio (bugs killed per Trooper)."
+      },
+      {
+        "title": "Order 3",
+        "description": "Follow directives issued by the Officers."
+      },
+      {
+        "title": "Order 4",
+        "description": "Protect your squad of Troopers (can use E-Vac)."
+      },
+      {
+        "title": "Order 5",
+        "description": "Ensure that no creatures in an encounter survive."
+      },
+      {
+        "title": "Order 6",
+        "description": "Enforce discipline on the lower ranks."
+      },
+      {
+        "title": "Order 7",
+        "description": "Ensure that no creatures on a planet survive."
+      },
+      {
+        "title": "Order 8",
+        "description": "Deliver Mission Briefings and plan assaults."
+      },
+      {
+        "title": "Order 9",
+        "description": "Complete important missions as directed by senior ranks."
+      },
+      {
+        "title": "Order 10",
+        "description": "Never retreat."
+      },
+      {
+        "title": "Order 11",
+        "description": "Oversee the destruction of life on planets."
+      },
+      {
+        "title": "Order 12",
+        "description": "Ensure that senior ranks are informed of insubordination."
+      }
+    ]
+  },
+  {
+    "rank": 7,
+    "title": "Colonel",
+    "description": "The rank of Colonel is one of the oldest in existence. In 3:16 it is the second highest field rank possible. Colonels are staff officers in between the Lt Colonels commanding in the field and the Brigadier directing the Brigade. As a Colonel a PC will be expected to take a great deal of authority and responsibility for the 3:16. He will also have to answer for his failures directly to the Brigadier.",
+    "orders": [
+      {
+        "title": "Order 1",
+        "description": "Kill as many lifeforms as you can"
+      },
+      {
+        "title": "Order 2",
+        "description": "Maximize the kill ratio (bugs killed per Trooper)."
+      },
+      {
+        "title": "Order 3",
+        "description": "Follow directives issued by the Officers."
+      },
+      {
+        "title": "Order 4",
+        "description": "Protect your squad of Troopers (can use E-Vac)."
+      },
+      {
+        "title": "Order 5",
+        "description": "Ensure that no creatures in an encounter survive."
+      },
+      {
+        "title": "Order 6",
+        "description": "Enforce discipline on the lower ranks."
+      },
+      {
+        "title": "Order 7",
+        "description": "Ensure that no creatures on a planet survive."
+      },
+      {
+        "title": "Order 8",
+        "description": "Deliver Mission Briefings and plan assaults."
+      },
+      {
+        "title": "Order 9",
+        "description": "Complete important missions as directed by senior ranks."
+      },
+      {
+        "title": "Order 10",
+        "description": "Never retreat."
+      },
+      {
+        "title": "Order 11",
+        "description": "Oversee the destruction of life on planets."
+      },
+      {
+        "title": "Order 12",
+        "description": "Ensure that senior ranks are informed of insubordination."
+      },
+      {
+        "title": "Order 13",
+        "description": "Identify planets for destruction and inform Lt Colonels."
+      },
+      {
+        "title": "Order 14",
+        "description": "Kill those who disobey orders."
+      }
+    ]
+  },
+  {
+    "rank": 8,
+    "title": "Brigadier",
+    "description": "The highest officer rank that a PC can reach in 3:16 is that of Brigadier. You are in charge of the whole 16th Brigade of the 3rd Army of the Expeditionary Force. The Brigadier answers to the Terran Council and directly to the General of the 3rd Army.\nThe Brigade currently has someone of this rank, of course, so promotion to this rank requires the present Brigadier to be dead.",
+    "orders": [
+      {
+        "title": "Order 1",
+        "description": "Kill as many lifeforms as you can"
+      },
+      {
+        "title": "Order 2",
+        "description": "Maximize the kill ratio (bugs killed per Trooper)."
+      },
+      {
+        "title": "Order 3",
+        "description": "Follow directives issued by the Officers."
+      },
+      {
+        "title": "Order 4",
+        "description": "Protect your squad of Troopers (can use E-Vac)."
+      },
+      {
+        "title": "Order 5",
+        "description": "Ensure that no creatures in an encounter survive."
+      },
+      {
+        "title": "Order 6",
+        "description": "Enforce discipline on the lower ranks."
+      },
+      {
+        "title": "Order 7",
+        "description": "Ensure that no creatures on a planet survive."
+      },
+      {
+        "title": "Order 8",
+        "description": "Deliver Mission Briefings and plan assaults."
+      },
+      {
+        "title": "Order 9",
+        "description": "Complete important missions as directed by senior ranks."
+      },
+      {
+        "title": "Order 10",
+        "description": "Never retreat."
+      },
+      {
+        "title": "Order 11",
+        "description": "Oversee the destruction of life on planets."
+      },
+      {
+        "title": "Order 12",
+        "description": "Ensure that senior ranks are informed of insubordination."
+      },
+      {
+        "title": "Order 13",
+        "description": "Identify planets for destruction and inform Lt Colonels."
+      },
+      {
+        "title": "Order 14",
+        "description": "Kill those who disobey orders."
+      },
+      {
+        "title": "Order 15",
+        "description": "Kill all life in the Cosmos."
+      },
+      {
+        "title": "Order 16",
+        "description": "Ensure that the Expeditionary Force does not return to Terra under any circumstances."
+      }
+    ]
   }
 ]
