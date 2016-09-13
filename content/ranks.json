@@ -1,0 +1,51 @@
+[
+  {
+    "rank": 0,
+    "title": "Trooper",
+    "description": "The lowest rank in 3:16 and they can use Force Weakness.",
+    "orders": [
+      {
+        "title": "Order 1",
+        "description": "Kill as many lifeforms as you can"
+      }
+    ]
+  },
+  {
+    "rank": 1,
+    "title": "Corporal",
+    "description": "TA step up from Trooper and the Sergeant’s right-hand man.",
+    "orders": [
+      {
+        "title": "Order 1",
+        "description": "Kill as many lifeforms as you can"
+      },
+      {
+        "title": "Order 2",
+        "description": "Maximize the kill ratio (bugs killed per Trooper)."
+      }
+    ]
+  },
+  {
+    "rank": 2,
+    "title": "Sergeant",
+    "description": "A Non-Commissioned Officer in charge of a squad of Troopers.",
+    "orders": [
+      {
+        "title": "Order 1",
+        "description": "Kill as many lifeforms as you can"
+      },
+      {
+        "title": "Order 2",
+        "description": "Maximize the kill ratio (bugs killed per Trooper)."
+      },
+      {
+        "title": "Order 3",
+        "description": "Follow directives issued by the Officers."
+      },
+      {
+        "title": "Order 4",
+        "description": "Protect your squad of Troopers (can use E-Vac)."
+      }
+    ]
+  }
+]

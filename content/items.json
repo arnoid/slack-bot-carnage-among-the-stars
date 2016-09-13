@@ -1,0 +1,537 @@
+{
+  "CANCER STICKS": {
+    "title": "CANCER STICKS",
+    "description": "These slim white sticks come in packs of 20 and smoulder quietly to themselves while giving you cancer. Highly addictive, they have a pleasant habit-forming method of use: rip open the packet, strike along the box and then place in the mouth. Inhale, Savour, Exhale, Repeat. They even come in Maple Syrup and Blueberry flavour.",
+    "profile": {
+      "basic": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      }
+    },
+    "rank": 0,
+    "oneUse": false,
+    "upgradable": false
+  },
+  "COMBAT DRUGS": {
+    "title": "COMBAT DRUGS",
+    "description": "A cocktail of endorphins and mood-altering pills that turn normally docile Terrans into frothing kill-machines. They either grant great sexual potency or ruin your libido. Once a planet these let you re-roll a d10 on an FA test. But, on a roll of 10, you take a kill yourself.",
+    "profile": {
+      "basic": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "rank": 0,
+      "oneUse": true,
+      "upgradable": false
+    },
+    "ENTRENCHING TOOLS": {
+      "title": "ENTRENCHING TOOLS",
+      "description": "Easily assembled shovel for digging in all conditions and soils. Doubles as an effective and bloody hand-to-hand weapon.",
+      "profile": {
+        "basic": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "rank": 0,
+        "oneUse": true,
+        "upgradable": false
+      },
+      "rank": 0,
+      "oneUse": false,
+      "upgradable": false
+    },
+    "FIELD MANUAL": {
+      "title": "FIELD MANUAL",
+      "description": "This is a Trooper’s best guide to keeping himself alive and sane while blowing shit up all across the Cosmos. Surprisingly useful.",
+      "profile": {
+        "basic": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "rank": 0,
+        "oneUse": true,
+        "upgradable": false
+      },
+      "rank": 0,
+      "oneUse": false,
+      "upgradable": false
+    },
+    "HOLO-SHOW": {
+      "title": "HOLO-SHOW",
+      "description": "These little boxes are a Trooper’s best friend when far from home. Press the friendly orange button on the Holo-Show’s lid and you can flick through countless images and movies of your friends and family back home on Terra, all in life-like three-dimensions.",
+      "profile": {
+        "basic": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "rank": 0,
+        "oneUse": true,
+        "upgradable": false
+      },
+      "rank": 0,
+      "oneUse": false,
+      "upgradable": false
+    },
+    "HYDRATION TABLETS": {
+      "title": "HYDRATION TABLETS",
+      "description": "These helpful tabs give you clean water out of just about anything. Pop them straight into your mouth with some carbs to get a somewhat bland watery slush. Foul tasting but life-saving.",
+      "close": "-",
+      "near": "-",
+      "far": "-",
+      "rank": 0,
+      "oneUse": false,
+      "upgradable": false
+    },
+    "MITT AND BALL": {
+      "title": "MITT AND BALL",
+      "description": "A leathery glove and a polymer ball can bring endless hours of fun and exercise for Troopers between encounters. Officers look upon such activities as team-building and useful. It certainly keeps a Trooper’s mind off thinking about the bigger picture.",
+      "profile": {
+        "basic": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "rank": 0,
+        "oneUse": true,
+        "upgradable": false
+      },
+      "rank": 0,
+      "oneUse": false,
+      "upgradable": false
+    },
+    "PERSONAL MEDIPACK": {
+      "title": "PERSONAL MEDIPACK",
+      "description": "The box of tricks you use to patch yourself up between fights. ",
+      "profile": {
+        "basic": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "rank": 0,
+        "oneUse": true,
+        "upgradable": false
+      },
+      "rank": 0,
+      "oneUse": true,
+      "upgradable": false
+    },
+    "RADIUM GUM": {
+      "title": "RADIUM GUM",
+      "description": "A soft chewable gum that is habit forming and cancer-giving.",
+      "profile": {
+        "basic": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "rank": 0,
+        "oneUse": true,
+        "upgradable": false
+      },
+      "rank": 0,
+      "oneUse": false,
+      "upgradable": false
+    },
+    "TRM": {
+      "title": "TRM",
+      "description": "TRM [TROOPER READY MEALS]\nTrooper Ready Meals are shit. Not literally, no, but they taste dreadful. They do keep you powered up for killing and that’s all the Sarge cares about. A popular target for Trooper scorn.",
+      "profile": {
+        "basic": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "rank": 0,
+        "oneUse": true,
+        "upgradable": false
+      },
+      "rank": 0,
+      "oneUse": false,
+      "upgradable": false
+    },
+    "MANDELBRITE SUIT": {
+      "title": "MANDELBRITE SUIT",
+      "description": "In play you should be describing your MandelBrite suits as having fanciful and sometimes useful fittings. I’ve seen players describe motion sensors, health monitors for the squad, temperature and humidity gauges as well as a squad urine monitor. \nThe suits have visors that can flip up easily when required, either for a better look at something or to pop a quick cancer stick in the mouth.",
+      "profile": {
+        "basic": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "-",
+          "near": "-",
+          "far": "-"
+        },
+        "rank": 0,
+        "oneUse": true,
+        "upgradable": false
+      },
+      "rank": 0,
+      "oneUse": true,
+      "upgradable": false
+    },
+    "ENERGY RIFLE": {
+      "title": "ENERGY RIFLE",
+      "description": "The Energy Rifle is the standard piece of kit for Troopers. With a virtually endless supply of shots this energy weapon allows killing over a range of distances. Great for carving down hordes of alien life forms given the opportunity.",
+      "profile": {
+        "basic": {
+          "close": "1",
+          "near": "d10",
+          "far": "1"
+        },
+        "current": {
+          "close": "1",
+          "near": "d10",
+          "far": "1"
+        },
+        "best": {
+          "close": "d10",
+          "near": "2d10",
+          "far": "d10"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "E-CANNON": {
+      "title": "E-CANNON",
+      "description": "This heavy duty death-dealer is the sort of weapon that bad, bad people dream about at night. Heavy to carry and hard to run with, but these souped-up versions of the Energy Rifle are the kings of carnage. Point at the enemy.",
+      "profile": {
+        "basic": {
+          "close": "0",
+          "near": "2d10",
+          "far": "0"
+        },
+        "current": {
+          "close": "0",
+          "near": "2d10",
+          "far": "0"
+        },
+        "best": {
+          "close": "d6",
+          "near": "d100",
+          "far": "d6"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "SLUG RIFLE": {
+      "title": "SLUG RIFLE",
+      "description": "The “Slugger” fires actual bullets and so has greater killing power at range than energy weapons do. However, it is slower to fire and has one hell of an amount of recoil. But for the Trooper who happily trades bruises for bugs in the dust, this is the weapon of choice. Fires with a satisfying crack.",
+      "profile": {
+        "basic": {
+          "close": "1",
+          "near": "d6",
+          "far": "d6"
+        },
+        "current": {
+          "close": "1",
+          "near": "d6",
+          "far": "d6"
+        },
+        "best": {
+          "close": "d10",
+          "near": "2d6",
+          "far": "2d6"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "HEAVY MG": {
+      "title": "HEAVY MG",
+      "description": "The Heavy Machine Gun unleashes torrents of bullets out of its muzzle when the trigger is depressed. Slow to load and known for its jumpy recoil this is often a vehicle-mounted weapon. Ineffective at long distances but kill-happy when at Near Range.",
+      "profile": {
+        "basic": {
+          "close": "1",
+          "near": "2d6",
+          "far": "0"
+        },
+        "current": {
+          "close": "1",
+          "near": "2d6",
+          "far": "0"
+        },
+        "best": {
+          "close": "d10",
+          "near": "3d10",
+          "far": "d6"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "HAND-TO-HAND": {
+      "title": "HAND-TO-HAND",
+      "description": "This covers attacks with fists, feet, knees, swords, axes, knives, broken bottles, tins of pre-processed food, garrottes, clubs, staves, empty or broken guns, wrenches and, of course, headbutts. You can always switch to Hand-To-Hand as a weapon even if you failed on your last turn. It’s humanity’s most basic weapon.",
+      "profile": {
+        "basic": {
+          "close": "1",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "1",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "d10",
+          "near": "-",
+          "far": "-"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "POWERCLAW": {
+      "title": "POWERCLAW",
+      "description": "The PowerClaw is a close-combat weapon mounted on a Trooper’s left or right arm, depending on the owner’s preference. It makes a potent weapon and can be switched to, like Hand-To-Hand, even if you failed on your last turn. A new twist on fist attacks.",
+      "profile": {
+        "basic": {
+          "close": "d6",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "d6",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "2d6",
+          "near": "-",
+          "far": "-"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "SIDEARM": {
+      "title": "SIDEARM",
+      "description": "The Sidearm is a standard piece of kit for Sergeants and Officers. Whilst Troopers may happily frag anything that moves, including each other, the wielder of a sidearm calmly dispatches critters in close combat with accurate shots from this automatic pistol.",
+      "profile": {
+        "basic": {
+          "close": "d6",
+          "near": "d6",
+          "far": "-"
+        },
+        "current": {
+          "close": "d6",
+          "near": "d6",
+          "far": "-"
+        },
+        "best": {
+          "close": "2d6",
+          "near": "2d6",
+          "far": "-"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "POWERBLADE": {
+      "title": "POWERBLADE",
+      "description": "PowerBlades are weapons like the ChainAxe, ElectroSword or MagneticMaul. These closecombat weapons use similar technology to the PowerClaw but with the added leverage of swinging, cutting and thrusting attacks.",
+      "profile": {
+        "basic": {
+          "close": "d10",
+          "near": "-",
+          "far": "-"
+        },
+        "current": {
+          "close": "d10",
+          "near": "-",
+          "far": "-"
+        },
+        "best": {
+          "close": "2d10",
+          "near": "-",
+          "far": "-"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "GRENADES": {
+      "title": "GRENADES",
+      "description": "A Trooper’s best friend when trying to clear caves and buildings. They cut down friend and foe alike, and officers take a dim view of being “fragged”. You can always switch to grenades as a weapon.\n*SPECIAL EFFECT: Grenades cause a kill to any PC at Close Range with the aliens who failed their die roll this Combat Round.",
+      "profile": {
+        "basic": {
+          "close": "d10*",
+          "near": "1*",
+          "far": "-"
+        },
+        "current": {
+          "close": "d10",
+          "near": "1",
+          "far": "-"
+        },
+        "best": {
+          "close": "2d10",
+          "near": "d10",
+          "far": "-"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "FLAME-GUN": {
+      "title": "FLAME-GUN",
+      "description": "This is absolutely deadly at the very closest range. Jetting superheated chemical death the Flame-Gun is a popular choice of Troopers looking for a new weapon that will cleanse planets of alien scum by the fiery barrel load.",
+      "profile": {
+        "basic": {
+          "close": "2d6",
+          "near": "1",
+          "far": "-"
+        },
+        "best": {
+          "close": "3d10",
+          "near": "d10",
+          "far": "-"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "ROCKETPOD": {
+      "title": "ROCKETPOD",
+      "description": "The Rocketpod is a truly longrange weapon. It fires volleys of small missiles at targets at the very farthest ranges. It requires some skill to score more kills at targets that are nearer and it is incapable of killing at Close Range. Many a Trooper is proud of the fire his Rocketpod can rain down.",
+      "profile": {
+        "basic": {
+          "close": "-",
+          "near": "0",
+          "far": "2d10"
+        },
+        "best": {
+          "close": "-",
+          "near": "d6",
+          "far": "d100"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    },
+    "SHOTGUN": {
+      "title": "SHOTGUN",
+      "description": "The Shotgun is a rapid-firing close-assault weapon that causes mass carnage at Close Range. Popular with Troopers that have to fight up close and personal the Shotgun usually sees action on at least a few missions over the course of a campaign.",
+      "profile": {
+        "basic": {
+          "close": "d10",
+          "near": "d6",
+          "far": "-"
+        },
+        "best": {
+          "close": "2d10",
+          "near": "d6",
+          "far": "2d6"
+        }
+      },
+      "oneUse": false,
+      "upgradable": true
+    }
+  }
+}

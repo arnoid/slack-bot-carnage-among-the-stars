@@ -1,0 +1,21 @@
+{
+  "name": "slack-rpg",
+  "version": "0.0.1",
+  "description": "Slackbot RPG Master",
+  "main": "connect.js",
+  "private": true,
+  "scripts": {
+    "start": "node connect.js",
+    "test": "npm run unit",
+    "unit": "faucet",
+    "lint": "eslint .",
+    "travis": "npm run lint && npm run coverage && npm run coveralls"
+  },
+  "dependencies": {
+    "@slack/client": "^3.6.0",
+    "ascii-table": "0.0.9",
+    "image-to-ascii": "^3.0.3",
+    "jsonfile": "2.3.1",
+    "roll": "^1.1.0"
+  }
+}
