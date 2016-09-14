@@ -49,6 +49,9 @@ rtm.on(RTM_EVENTS.MESSAGE, function handleRtmMessage(message) {
 
     console.log('Command for BOT received:', message.text);
     var command = commands.parseCommand(message.text)
+
+    message.dataStore = rtm.dataStore;
+
     var shouldSendDm;
 
     if (typeof command === 'undefined') {

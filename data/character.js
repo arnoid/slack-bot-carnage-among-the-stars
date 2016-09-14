@@ -103,7 +103,7 @@ var Character = class Character {
 
         var table = new AsciiTable();
 
-        table.addRow('**HP**', this.hp, '**FA**', this.fa);
+        table.addRow('**HP**', this.hp + '', '**FA**', this.fa);
         table.addRow('**KILLS**', this.kills + "/" + this.totalKills, '**NFA**', this.nfa);
         table.addRow('Strength', this.calculateStrength(), 'Weakness', this.calculateWeakness());
         table.addRow('**Items**', '**close**', '**near**', '**far**');
@@ -224,7 +224,7 @@ var Character = class Character {
 
         var table = new AsciiTable();
 
-        table.addRow('**HP**', this.hp, '**FA**', this.fa);
+        table.addRow('**HP**', this.hp + '', '**FA**', this.fa);
         table.addRow('**KILLS**', this.kills + "/" + this.totalKills, '**NFA**', this.nfa);
         table.addRow('Strength', this.calculateStrength(), 'Weakness', this.calculateWeakness());
         table.addRow('**Items**', '**close**', '**near**', '**far**');

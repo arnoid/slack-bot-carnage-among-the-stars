@@ -1,8 +1,8 @@
 var Map = require('../data/map.js')
 
-var regex = /^set map (planet|mission|aa description|a description|aa|at) ([0-9a-zA-Z .,\n]*)$/;
+var regex = /^move (f|far|n|near|c|close) <@([a-zA-Z0-9]*)>$/;
 
-var tag = "MAP SET:"
+var tag = "MAP MOVE CHARACTER:"
 
 module.exports = {
 
@@ -18,25 +18,21 @@ module.exports = {
 
         var params = message.text.match(regex);
 
-        var mapKey = params[1].toLowerCase().trim();
+        var rangeName = params[1].toLowerCase().trim();
+        var userId = params[2]
 
-        if (/^aa$/.test(mapKey)) {
-            mapKey = 'alienAbility'
-        } else if (/^at$/.test(mapKey)) {
-            mapKey = 'alienToken'
-        } else if (/^planet$/.test(mapKey)) {
-            mapKey = 'planet'
-        } else if (/^mission$/.test(mapKey)) {
-            mapKey = 'mission'
-        } else if (/^aa description$/.test(mapKey)) {
-            mapKey = 'alienAbilityDescription'
-        } else if (/^a description$/.test(mapKey)) {
-            mapKey = 'alienDescription'
+        var characterName = message.dataStore.getUserById(userId).name
+
+        if (/^(c|close)/.test(rangeName)) {
+            rangeName = 'close'
+        } else if (/^(n|near)$/.test(rangeName)) {
+            rangeName = 'near'
+        } else if (/^(f|far)$/.test(rangeName)) {
+            rangeName = 'far'
         }
 
-        map[mapKey] = params[2];
-
-        map.save();
+        map.moveCharacterToRange(characterName, rangeName);
+        map.save()
 
         return "<@" + message.user + "> " + map.shortToString();
     },

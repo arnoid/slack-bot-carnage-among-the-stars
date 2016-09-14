@@ -2,9 +2,9 @@ var Map = class Map {
 
     constructor(mapRoomName) {
         this.roomName = mapRoomName;
-        this.close = 0;
-        this.near = 0;
-        this.far = 0;
+        this.close = [];
+        this.near = [];
+        this.far = [];
         this.alienToken = 0;
         this.alienAbility = 0;
         this.planet = "";
@@ -39,6 +39,30 @@ var Map = class Map {
         this.alienDescription = json.alienDescription;
     }
 
+    moveCharacterToRange(characterName, rangeName) {
+
+        var filter = function (item){
+            return item !== characterName
+        };
+
+        this.close = this.close.filter(filter)
+        this.near = this.near.filter(filter)
+        this.far = this.far.filter(filter)
+
+        this[rangeName].push(characterName)
+    }
+
+    removeCharacterFromRange(characterName, range) {
+        var position = range.indexOf(characterName)
+
+        console.log(position + " = " + (position !== -1))
+
+        if (position !== -1) {
+            delete range[position]
+        }
+
+    }
+
     load() {
 
         try {
@@ -59,8 +83,6 @@ var Map = class Map {
         var jsonfile = require('jsonfile')
         var mapFile = require('path').dirname(require.main.filename) + '/content/map/' + this.roomName + '.json';
 
-        console.log()
-
         jsonfile.writeFileSync(
             mapFile,
             this
@@ -72,12 +94,17 @@ var Map = class Map {
         var AsciiTable = require('ascii-table')
 
         var mapTable = new AsciiTable('Map')
+
+        var mapToSlackUserName = function (characterName) {
+            return '@' + characterName
+        }
+
         mapTable
             .addRow('Alien Skill', '' + this.alienAbility)
             .addRow('Alien Tokens', '' + this.alienToken)
-            .addRow('Close', '' + this.close)
-            .addRow('Near', '' + this.near)
-            .addRow('Far', '' + this.far)
+            .addRow('Close', '' + this.close.map(mapToSlackUserName))
+            .addRow('Near', '' + this.near.map(mapToSlackUserName))
+            .addRow('Far', '' + this.far.map(mapToSlackUserName))
 
         return '```' + mapTable.toString() + '```';
     }
