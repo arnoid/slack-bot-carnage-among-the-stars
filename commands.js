@@ -6,6 +6,7 @@ var commandsMap = {
     map_stat : require('./commands/map_stat.js'),
     map_create : require('./commands/map_create.js'),
     map_set : require('./commands/map_set.js'),
+    map_add : require('./commands/map_add.js'),
 
     character_create : require('./commands/character_create.js'),
     character_hitpoints : require('./commands/character_hitpoints.js'),
