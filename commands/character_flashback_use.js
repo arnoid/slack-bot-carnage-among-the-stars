@@ -6,11 +6,11 @@ var tag = "CHARACTER FLASHBACK USE:";
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message.text);
 
         var params = message.text.match(regex);
@@ -24,24 +24,25 @@ module.exports = {
             var character = new Character()
             character.load(characterName)
 
-            if(typeof character !== 'undefined') {
+            if (typeof character !== 'undefined') {
                 var used = character.useFlashback(flashbackType, flashbackTitle);
 
-                if(used) {
+                if (used) {
                     character.save();
                     output = "<@" + characterName + "> used [" + flashbackType + "] = [" + flashbackTitle + "]";
                 } else {
                     output = "<@" + characterName + "> has no [" + flashbackType + "] left";
                 }
             }
-        } catch (err) {}
+        } catch (err) {
+        }
 
         return output;
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

@@ -5,11 +5,11 @@ var tag = "CHARACTER CREATE:";
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message.text);
 
         var name = message.text.match(regex)[1].trim();
@@ -20,9 +20,9 @@ module.exports = {
         return "<@" + message.user + ">: created";
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

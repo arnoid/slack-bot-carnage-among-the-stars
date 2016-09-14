@@ -6,11 +6,11 @@ var tag = "MAP:"
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message);
 
         var map = new Map(message.channel);
@@ -19,18 +19,18 @@ module.exports = {
         map.save();
 
         var output
-        if(message.text.match(regex)[1]) {
+        if (message.text.match(regex)[1]) {
             output = "<@" + message.user + "> \n" + map.toString(map)
-        }else {
+        } else {
             output = "<@" + message.user + "> \n" + map.shortToString(map);
         }
 
         return output;
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

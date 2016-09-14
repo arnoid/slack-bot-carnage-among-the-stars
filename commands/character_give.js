@@ -9,17 +9,17 @@ var tag = "CHARACTER GIVE:";
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message.text);
 
         var characterName = message.text.match(characterNameRegex)[1];
         var itemName = message.text.match(itemNameRegex)[1].toUpperCase();
 
-        var output = "<@" + message.user + ">: no such character [<@" + characterName +'>]';
+        var output = "<@" + message.user + ">: no such character [<@" + characterName + '>]';
 
 //        try{
         var character = new Character()
@@ -27,8 +27,8 @@ module.exports = {
 
         var item = Item.loadAll()[itemName]
 
-        if(typeof item === 'undefined') {
-            output = "no such item [" + itemName +']'
+        if (typeof item === 'undefined') {
+            output = "no such item [" + itemName + ']'
         } else {
             character.addItem(item);
             character.save();
@@ -40,9 +40,9 @@ module.exports = {
         return output;
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

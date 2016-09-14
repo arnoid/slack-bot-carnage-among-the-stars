@@ -36,7 +36,7 @@ var Character = class Character {
         this.nfa = json.nfa;
 
         this.items = {};
-        for(var i in json.items) {
+        for (var i in json.items) {
             var jsonItem = json.items[i];
 
             var item = new Item()
@@ -45,7 +45,7 @@ var Character = class Character {
         }
 
         this.weakness = [];
-        for(var i in json.weakness) {
+        for (var i in json.weakness) {
             var jsonWeakness = json.weakness[i];
 
             var currentWeakness = new Flashback()
@@ -54,7 +54,7 @@ var Character = class Character {
         }
 
         this.strength = [];
-        for(var j in json.strength) {
+        for (var j in json.strength) {
             var jsonStrength = json.strength[j];
 
             var currentStrength = new Flashback();
@@ -90,7 +90,7 @@ var Character = class Character {
             characterFile,
             this,
             {},
-            function(err, obj) {
+            function (err, obj) {
                 console.log(obj)
             }
         )
@@ -99,32 +99,32 @@ var Character = class Character {
     }
 
     shortStats() {
-       var AsciiTable = require('ascii-table');
+        var AsciiTable = require('ascii-table');
 
-       var table = new AsciiTable();
+        var table = new AsciiTable();
 
-       table.addRow('**HP**', this.hp, '**FA**', this.fa);
-       table.addRow('**KILLS**', this.kills + "/" + this.totalKills, '**NFA**', this.nfa);
-       table.addRow('Strength', this.calculateStrength(), 'Weakness', this.calculateWeakness());
-       table.addRow('**Items**', '**close**', '**near**', '**far**');
+        table.addRow('**HP**', this.hp, '**FA**', this.fa);
+        table.addRow('**KILLS**', this.kills + "/" + this.totalKills, '**NFA**', this.nfa);
+        table.addRow('Strength', this.calculateStrength(), 'Weakness', this.calculateWeakness());
+        table.addRow('**Items**', '**close**', '**near**', '**far**');
 
-       var itemKeys = Object.keys(this.items)
+        var itemKeys = Object.keys(this.items)
 
-       for(var key in itemKeys) {
-           var currentItem = this.items[itemKeys[key]];
+        for (var key in itemKeys) {
+            var currentItem = this.items[itemKeys[key]];
 
-           var itemProfile = currentItem.profiles.current;
+            var itemProfile = currentItem.profiles.current;
 
-           if(itemProfile.close === '-' &&
-              itemProfile.near === '-' &&
-              itemProfile.far === '-' ) {
+            if (itemProfile.close === '-' &&
+                itemProfile.near === '-' &&
+                itemProfile.far === '-') {
                 //ignore this for short stats
-           } else {
+            } else {
                 table.addRow((currentItem.singleUse ? '[*]' : '[ ]') + currentItem.title, itemProfile.close, itemProfile.near, itemProfile.far);
             }
-       }
+        }
 
-       return "<@" + this.name + ">\n ```" + table.toString() + "```";
+        return "<@" + this.name + ">\n ```" + table.toString() + "```";
     }
 
     addItem(item) {
@@ -138,10 +138,10 @@ var Character = class Character {
     calculateFlashbacks(flashbacks) {
         var total = 0;
         var available = 0;
-        for(key in this.flashbacks) {
+        for (key in this.flashbacks) {
             var flashback = this.flashbacks[key];
             total = total + 1;
-            if(flashback.available) {
+            if (flashback.available) {
                 available = available + 1;
             }
         }
@@ -169,16 +169,16 @@ var Character = class Character {
 
         var flashback;
 
-        for(var key in flashbackStorage) {
+        for (var key in flashbackStorage) {
             var tempFlashback = flashbackStorage[key];
 
-            if(tempFlashback.available) {
+            if (tempFlashback.available) {
                 flashback = tempFlashback;
                 break;
             }
         }
 
-        if(typeof flashback !== 'undefined') {
+        if (typeof flashback !== 'undefined') {
             flashback.use(title);
 
             used = true;
@@ -192,11 +192,11 @@ var Character = class Character {
         //hp label offset
         const offset = 1;
         var hp = '';
-        for(var i = offset; i < MAX_HP + offset; i++) {
-            if(this.hp < i) {
-                hp  = hp + '[ ]'
+        for (var i = offset; i < MAX_HP + offset; i++) {
+            if (this.hp < i) {
+                hp = hp + '[ ]'
             } else {
-                hp  = hp + '[#]'
+                hp = hp + '[#]'
             }
         }
 
@@ -231,7 +231,7 @@ var Character = class Character {
 
         var itemKeys = Object.keys(this.items)
 
-        for(var key in itemKeys) {
+        for (var key in itemKeys) {
             var currentItem = this.items[itemKeys[key]];
 
             var itemProfile = currentItem.profiles.current;
@@ -241,13 +241,13 @@ var Character = class Character {
 
         table.addRow('**Strength**', 'available', '**Weakness**', 'available');
 
-        for(var w = 0, s = 0; w < this.weakness.length || s < this.strength.length; w++, s++ ) {
+        for (var w = 0, s = 0; w < this.weakness.length || s < this.strength.length; w++, s++) {
             var currentWeakness = this.weakness[w];
             var currentStrength = this.strength[s];
 
             var line = [];
 
-            if(typeof currentStrength === 'undefined') {
+            if (typeof currentStrength === 'undefined') {
                 line.push('')
                 line.push('')
             } else {
@@ -255,7 +255,7 @@ var Character = class Character {
                 line.push(currentStrength.available)
             }
 
-            if(typeof currentWeakness === 'undefined') {
+            if (typeof currentWeakness === 'undefined') {
                 line.push('')
                 line.push('')
             } else {

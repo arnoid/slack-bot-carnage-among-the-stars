@@ -7,11 +7,11 @@ var tag = "ROLL:"
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message);
 
         var dice = message.text.match(rollRegex)[1].trim();
@@ -19,9 +19,9 @@ module.exports = {
         return "> " + dice + " = " + new Roll().roll(dice).result;
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

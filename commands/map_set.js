@@ -6,11 +6,11 @@ var tag = "MAP SET:"
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message);
 
         var map = new Map(message.channel);
@@ -20,23 +20,23 @@ module.exports = {
 
         var mapKey = params[1].toLowerCase().trim();
 
-        if(/^aa$/.test(mapKey)) {
+        if (/^aa$/.test(mapKey)) {
             mapKey = 'alienAbility'
-        } else if(/^at$/.test(mapKey)) {
+        } else if (/^at$/.test(mapKey)) {
             mapKey = 'alienToken'
-        } else if(/^c$/.test(mapKey)) {
+        } else if (/^c$/.test(mapKey)) {
             mapKey = 'close'
-        } else if(/^n$/.test(mapKey)) {
+        } else if (/^n$/.test(mapKey)) {
             mapKey = 'near'
-        } else if(/^f$/.test(mapKey)) {
+        } else if (/^f$/.test(mapKey)) {
             mapKey = 'far'
-        } else if(/^planet$/.test(mapKey)) {
+        } else if (/^planet$/.test(mapKey)) {
             mapKey = 'planet'
-        } else if(/^mission$/.test(mapKey)) {
+        } else if (/^mission$/.test(mapKey)) {
             mapKey = 'mission'
-        } else if(/^aa description$/.test(mapKey)) {
+        } else if (/^aa description$/.test(mapKey)) {
             mapKey = 'alienAbilityDescription'
-        } else if(/^a description$/.test(mapKey)) {
+        } else if (/^a description$/.test(mapKey)) {
             mapKey = 'alienDescription'
         }
 
@@ -47,9 +47,9 @@ module.exports = {
         return "<@" + message.user + "> " + map.shortToString();
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

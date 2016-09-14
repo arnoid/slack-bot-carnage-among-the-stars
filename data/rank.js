@@ -14,7 +14,7 @@ var Rank = class Rank {
         this.description = json.description;
 
         this.orders = [];
-        for(var i in json.orders) {
+        for (var i in json.orders) {
             var jsonOrder = json.orders[i];
 
             var order = new Order()
@@ -28,7 +28,7 @@ var Rank = class Rank {
 
         var table = new AsciiTable('Orders')
 
-        for(var i = 0; i < this.orders.length; i++) {
+        for (var i = 0; i < this.orders.length; i++) {
             var order = this.orders[i]
             table.addRow(order.title, order.description)
         }
@@ -46,7 +46,7 @@ var loadAll = function loadAll() {
         var ranksFile = require('path').dirname(require.main.filename) + '/content/ranks.json';
         var ranksJson = jsonfile.readFileSync(ranksFile)
 
-        for(var i in ranksJson) {
+        for (var i in ranksJson) {
             var rankJson = ranksJson[i]
 
             var rank = new Rank()

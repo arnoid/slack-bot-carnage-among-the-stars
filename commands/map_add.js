@@ -6,11 +6,11 @@ var tag = "MAP SET:"
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message);
 
         var map = new Map(message.channel);
@@ -20,19 +20,19 @@ module.exports = {
 
         var mapKey = params[1].toLowerCase().trim();
 
-        if(/^aa$/.test(mapKey)) {
+        if (/^aa$/.test(mapKey)) {
             mapKey = 'alienAbility'
-        } else if(/^at$/.test(mapKey)) {
+        } else if (/^at$/.test(mapKey)) {
             mapKey = 'alienToken'
-        } else if(/^c$/.test(mapKey)) {
+        } else if (/^c$/.test(mapKey)) {
             mapKey = 'close'
-        } else if(/^n$/.test(mapKey)) {
+        } else if (/^n$/.test(mapKey)) {
             mapKey = 'near'
-        } else if(/^f$/.test(mapKey)) {
+        } else if (/^f$/.test(mapKey)) {
             mapKey = 'far'
         }
 
-        console.log("!!!!!",parseInt(map[mapKey], 10) + parseInt(params[2], 10))
+        console.log("!!!!!", parseInt(map[mapKey], 10) + parseInt(params[2], 10))
 
         map[mapKey] = parseInt(map[mapKey], 10) + parseInt(params[2], 10);
 
@@ -41,9 +41,9 @@ module.exports = {
         return "<@" + message.user + "> " + map.shortToString();
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

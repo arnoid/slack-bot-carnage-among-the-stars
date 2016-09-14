@@ -1,5 +1,4 @@
 var Character = require('../data/character.js');
-var Item = require('../data/item.js');
 
 var regex = /^<@[a-zA-Z0-9]*> remove [a-zA-Z0-9 -]*$/;
 var characterNameRegex = /<@([a-zA-Z0-9]*)> remove [a-zA-Z0-9 -]*$/;
@@ -9,11 +8,11 @@ var tag = "CHARACTER REMOVE:";
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message.text);
 
         var characterName = message.text.match(characterNameRegex)[1];
@@ -31,9 +30,9 @@ module.exports = {
         return output;
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

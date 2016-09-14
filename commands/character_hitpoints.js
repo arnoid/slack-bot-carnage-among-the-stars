@@ -6,11 +6,11 @@ var tag = "HITPOINTS:"
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message);
 
         var name = message.text.match(regex)[1];
@@ -20,7 +20,7 @@ module.exports = {
             var character = new Character;
             character.load(name);
 
-            if(typeof character !== 'undefined') {
+            if (typeof character !== 'undefined') {
                 output = character.hpToString();
             }
         } catch (err) {
@@ -30,10 +30,9 @@ module.exports = {
     },
 
 
-
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

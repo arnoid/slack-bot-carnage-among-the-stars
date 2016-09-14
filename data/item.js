@@ -15,9 +15,9 @@ var Item = class Item {
         this.description = json.description;
         this.upgradable = json.upgradable
 
-        if(typeof json.profiles !== 'undefined') {
+        if (typeof json.profiles !== 'undefined') {
             var keys = Object.keys(json.profiles);
-            for(var i in keys) {
+            for (var i in keys) {
                 var key = keys[i];
 
                 var jsonProfile = json.profiles[key];
@@ -41,8 +41,8 @@ var Item = class Item {
 
         console.log(profileKeys)
 
-        for(var i in profileKeys) {
-            if(profileKeys[i] === 'current') {
+        for (var i in profileKeys) {
+            if (profileKeys[i] === 'current') {
                 continue;
             }
 
@@ -51,15 +51,15 @@ var Item = class Item {
             table.addRow(profileKeys[i], profile.close, profile.near, profile.far)
         }
 
-        var upgradable = this.upgradable? "*Can be upgraded*" : "*Can NOT be upgraded*"
-        var singleUse = this.singleUse? "*Single Use ONLY*" : "*Reusable*"
+        var upgradable = this.upgradable ? "*Can be upgraded*" : "*Can NOT be upgraded*"
+        var singleUse = this.singleUse ? "*Single Use ONLY*" : "*Reusable*"
 
         return '```' + table.toString() + '\n' + upgradable + '\n' + singleUse + '\n' + this.description + '```';
     }
 }
 
 var loadAll = function loadAll() {
-    try{
+    try {
         var jsonfile = require('jsonfile')
         var itemsFile = require('path').dirname(require.main.filename) + '/content/items.json';
         var itemsJson = jsonfile.readFileSync(itemsFile)
@@ -79,27 +79,27 @@ var loadAll = function loadAll() {
             items[key] = item;
         }
 
-        items.toString = function() {
+        items.toString = function () {
             var AsciiTable = require('ascii-table')
 
             var table = new AsciiTable('Items')
 
-            table.setHeading('', '[*]','**Close**', '**Near**', '**Far**')
+            table.setHeading('', '[*]', '**Close**', '**Near**', '**Far**')
 
             var self = this;
 
             var itemParams = Object.keys(this);
 
-            for(var i in itemParams) {
+            for (var i in itemParams) {
                 var param = itemParams[i];
 
-                if(typeof this[param] === 'object') {
+                if (typeof this[param] === 'object') {
 
                     var item = this[param];
                     var profile = item.profiles.basic;
 
                     console.log(item.title)
-                    table.addRow(item.title, (item.singleUse ? '[*]':'[ ]'), profile.close, profile.near, profile.far)
+                    table.addRow(item.title, (item.singleUse ? '[*]' : '[ ]'), profile.close, profile.near, profile.far)
                 }
             }
 

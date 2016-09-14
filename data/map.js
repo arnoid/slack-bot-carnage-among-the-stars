@@ -41,7 +41,7 @@ var Map = class Map {
 
     load() {
 
-        try{
+        try {
             var jsonfile = require('jsonfile')
             var mapFile = require('path').dirname(require.main.filename) + '/content/map/' + this.roomName + '.json';
             var mapJson = jsonfile.readFileSync(mapFile)

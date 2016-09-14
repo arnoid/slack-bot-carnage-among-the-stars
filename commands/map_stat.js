@@ -6,11 +6,11 @@ var tag = "MAP:"
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message);
 
         console.log(Map)
@@ -22,7 +22,7 @@ module.exports = {
         try {
             map.load();
 
-            if(message.text.match(regex)[1]) {
+            if (message.text.match(regex)[1]) {
                 output = "<@" + message.user + "> \n" + map.toString();
             } else {
                 output = "<@" + message.user + "> \n" + map.shortToString();
@@ -35,9 +35,9 @@ module.exports = {
         return output;
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

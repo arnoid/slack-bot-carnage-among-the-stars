@@ -7,19 +7,19 @@ var tag = "SARGE:"
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message.text);
 
-        return sargeCommands[Math.floor(Math.random()*sargeCommands.length)];
+        return sargeCommands[Math.floor(Math.random() * sargeCommands.length)];
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

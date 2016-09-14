@@ -8,11 +8,11 @@ var tag = "CHARACTER ADD KILLS:";
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return false;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message.text);
 
         var characterName = message.text.match(characterNameRegex)[1];
@@ -27,20 +27,21 @@ module.exports = {
             var character = new Character()
             character.load(characterName)
 
-            if(typeof character !== 'undefined') {
+            if (typeof character !== 'undefined') {
                 character[stat] = parseInt(character[stat], 10) + parseInt(value, 10);
                 character.save();
 
                 output = "<@" + characterName + "> earned [" + value + "] " + stat + "\n" + character.shortStats();
             }
-        } catch (err) {}
+        } catch (err) {
+        }
 
         return output;
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {

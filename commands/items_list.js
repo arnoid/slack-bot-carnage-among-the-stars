@@ -6,23 +6,23 @@ var tag = "ITEMS LIST:"
 
 module.exports = {
 
-    shouldSendDm : function(message) {
+    shouldSendDm: function (message) {
         return true;
     },
 
-    process : function(message) {
+    process: function (message) {
         console.log(tag, message.text);
 
         var allItems = Item.loadAll();
 
         console.log(allItems)
 
-        return "<@" + message.user + ">: \n" + "```" + allItems.toString() +"```";
+        return "<@" + message.user + ">: \n" + "```" + allItems.toString() + "```";
     },
 
-    identify : function(commandText) {
+    identify: function (commandText) {
         var result;
-        if(commandText.match(regex)) {
+        if (commandText.match(regex)) {
             console.log(tag, "matches message [" + commandText + "]");
             result = true;
         } else {
