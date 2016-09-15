@@ -21,7 +21,7 @@ var Character = class Character {
         this.fa = 0;
         this.nfa = 0;
 
-        this.items = {};
+        this.items = [];
         this.weakness = [];
         this.strength = [];
     }
@@ -35,32 +35,26 @@ var Character = class Character {
         this.fa = json.fa;
         this.nfa = json.nfa;
 
-        this.items = {};
-        for (var i in json.items) {
-            var jsonItem = json.items[i];
-
+        this.items = [];
+        json.items.forEach(function (jsonItem) {
             var item = new Item()
             item.fromJson(jsonItem);
-            this.items[item.title] = item;
-        }
+            this.items.push(item);
+        }, this)
 
         this.weakness = [];
-        for (var i in json.weakness) {
-            var jsonWeakness = json.weakness[i];
-
+        json.weakness.forEach(function (jsonWeakness) {
             var currentWeakness = new Flashback()
             currentWeakness.fromJson(jsonWeakness);
             this.weakness.push(currentWeakness)
-        }
+        }, this)
 
         this.strength = [];
-        for (var j in json.strength) {
-            var jsonStrength = json.strength[j];
-
+        json.strength.forEach(function (jsonStrength) {
             var currentStrength = new Flashback();
             currentStrength.fromJson(jsonStrength);
             this.strength.push(currentStrength)
-        }
+        }, this)
     }
 
     load(name) {
@@ -73,7 +67,7 @@ var Character = class Character {
 
             this.fromJson(characterJson);
 
-            characterJson
+            return this;
         } catch (err) {
             console.log("ERROR:", "Unable to load character [<@" + name + ">]\n" + err)
 
@@ -108,11 +102,11 @@ var Character = class Character {
         table.addRow('Strength', this.calculateStrength(), 'Weakness', this.calculateWeakness());
         table.addRow('**Items**', '**close**', '**near**', '**far**');
 
-        var itemKeys = Object.keys(this.items)
+        this.items.sort(function (a, b) {
+            return a.title.localeCompare(b.title);
+        });
 
-        for (var key in itemKeys) {
-            var currentItem = this.items[itemKeys[key]];
-
+        this.items.forEach(function (currentItem) {
             var itemProfile = currentItem.profiles.current;
 
             if (itemProfile.close === '-' &&
@@ -122,29 +116,46 @@ var Character = class Character {
             } else {
                 table.addRow((currentItem.singleUse ? '[*]' : '[ ]') + currentItem.title, itemProfile.close, itemProfile.near, itemProfile.far);
             }
-        }
+        });
 
         return "<@" + this.name + ">\n ```" + table.toString() + "```";
     }
 
     addItem(item) {
-        this.items[item.title] = item;
+        this.items.push(item);
+        this.items.sort(function (a, b) {
+            return a.title.localeCompare(b.title);
+        });
     }
 
-    removeItem(item) {
-        delete this.items[item.title];
+    removeItem(itemName) {
+
+        var callbackObject = {};
+        callbackObject.filteredItems = [];
+        this.items = this.items.filter(function (currentItem) {
+            var result = itemName === currentItem.title;
+
+            if (result && this.filteredItems.length === 0) {
+                this.filteredItems.push(currentItem);
+
+                return false;
+            } else {
+                return true
+            }
+
+        }, callbackObject)
     }
 
     calculateFlashbacks(flashbacks) {
         var total = 0;
         var available = 0;
-        for (key in this.flashbacks) {
-            var flashback = this.flashbacks[key];
+
+        flashbacks.forEach(function (flashback) {
             total = total + 1;
             if (flashback.available) {
                 available = available + 1;
             }
-        }
+        });
 
         return total + "/" + available;
     }
@@ -167,16 +178,9 @@ var Character = class Character {
 
         console.log(this)
 
-        var flashback;
-
-        for (var key in flashbackStorage) {
-            var tempFlashback = flashbackStorage[key];
-
-            if (tempFlashback.available) {
-                flashback = tempFlashback;
-                break;
-            }
-        }
+        var flashback = flashbackStorage.find(function (tempFlashback) {
+            return tempFlashback.available
+        });
 
         if (typeof flashback !== 'undefined') {
             flashback.use(title);
@@ -229,15 +233,15 @@ var Character = class Character {
         table.addRow('Strength', this.calculateStrength(), 'Weakness', this.calculateWeakness());
         table.addRow('**Items**', '**close**', '**near**', '**far**');
 
-        var itemKeys = Object.keys(this.items)
+        this.items.sort(function (a, b) {
+            return a.title.localeCompare(b.title);
+        });
 
-        for (var key in itemKeys) {
-            var currentItem = this.items[itemKeys[key]];
-
+        this.items.forEach(function (currentItem) {
             var itemProfile = currentItem.profiles.current;
 
             table.addRow((currentItem.singleUse ? '[*]' : '[ ]') + currentItem.title, itemProfile.close, itemProfile.near, itemProfile.far);
-        }
+        })
 
         table.addRow('**Strength**', 'available', '**Weakness**', 'available');
 

@@ -1,6 +1,6 @@
 var Map = require('../data/map.js')
 
-var regex = /^set map (planet|mission|aa description|a description|aa|at) ([0-9a-zA-Z .,\n]*)$/;
+var regex = /^set map (planet|mission|aa description|a description|at planet|aa|at|atp) ([0-9a-zA-Z .,\n]*)$/;
 
 var tag = "MAP SET:"
 
@@ -22,6 +22,8 @@ module.exports = {
 
         if (/^aa$/.test(mapKey)) {
             mapKey = 'alienAbility'
+        } else if (/^(atp|at planet)$/.test(mapKey)) {
+            mapKey = 'alienTokenPlanet'
         } else if (/^at$/.test(mapKey)) {
             mapKey = 'alienToken'
         } else if (/^planet$/.test(mapKey)) {

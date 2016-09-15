@@ -25,7 +25,9 @@ module.exports = {
         var character = new Character()
         character.load(characterName)
 
-        var item = Item.loadAll()[itemName]
+        var item = Item.loadAll().find(function (item) {
+            return item.title === itemName;
+        });
 
         if (typeof item === 'undefined') {
             output = "no such item [" + itemName + ']'

@@ -16,15 +16,23 @@ module.exports = {
 
         var name = message.text.match(regex)[1].trim();
 
+        var output = "<@" + message.user + ">: ";
+
         var character = new Character();
-        character.load(name);
+        try {
+            character.load(name);
 
-        console.log(Rank)
+            console.log(Rank)
 
-        var rank = Rank.loadAll()[character.rank];
+            var rank = Rank.loadAll()[character.rank];
 
 
-        return "<@" + message.user + ">: \n" + rank.ordersToString();
+            output = output + "\n" + rank.ordersToString();
+        } catch (err) {
+            output = output + " <@" + name + "> not found";
+        }
+
+        return output;
     },
 
     identify: function (commandText) {

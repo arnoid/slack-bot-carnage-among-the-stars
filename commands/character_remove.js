@@ -18,10 +18,10 @@ module.exports = {
         var characterName = message.text.match(characterNameRegex)[1];
         var itemName = message.text.match(itemNameRegex)[1].toUpperCase();
 
-        var character = new Character()
-        character.load(characterName)
+        var character = new Character();
+        character.load(characterName);
 
-        delete character.items[itemName];
+        character.removeItem(itemName);
 
         character.save();
 

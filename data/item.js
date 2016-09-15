@@ -64,20 +64,18 @@ var loadAll = function loadAll() {
         var itemsFile = require('path').dirname(require.main.filename) + '/content/items.json';
         var itemsJson = jsonfile.readFileSync(itemsFile)
 
-        var keys = Object.keys(itemsJson);
+        var items = [];
 
-        var items = {};
-
-        for (var i in keys) {
-            var key = keys[i];
-
-            var itemJson = itemsJson[key]
-
+        itemsJson.forEach(function (itemJson) {
             var item = new Item()
             item.fromJson(itemJson);
 
-            items[key] = item;
-        }
+            items.push(item);
+        })
+
+        items.sort(function (a, b) {
+            return a.title.localeCompare(b.title);
+        });
 
         items.toString = function () {
             var AsciiTable = require('ascii-table')
@@ -85,8 +83,6 @@ var loadAll = function loadAll() {
             var table = new AsciiTable('Items')
 
             table.setHeading('', '[*]', '**Close**', '**Near**', '**Far**')
-
-            var self = this;
 
             var itemParams = Object.keys(this);
 

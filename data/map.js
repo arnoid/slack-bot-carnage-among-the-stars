@@ -6,6 +6,7 @@ var Map = class Map {
         this.near = [];
         this.far = [];
         this.alienToken = 0;
+        this.alienTokenPlanet = 0;
         this.alienAbility = 0;
         this.planet = "";
         this.mission = "";
@@ -31,6 +32,7 @@ var Map = class Map {
         this.near = json.near;
         this.far = json.far;
         this.alienToken = json.alienToken;
+        this.alienTokenPlanet = json.alienTokenPlanet;
         this.alienAbility = json.alienAbility;
         this.planet = json.planet;
         this.mission = json.mission;
@@ -50,17 +52,6 @@ var Map = class Map {
         this.far = this.far.filter(filter)
 
         this[rangeName].push(characterName)
-    }
-
-    removeCharacterFromRange(characterName, range) {
-        var position = range.indexOf(characterName)
-
-        console.log(position + " = " + (position !== -1))
-
-        if (position !== -1) {
-            delete range[position]
-        }
-
     }
 
     load() {
@@ -101,7 +92,7 @@ var Map = class Map {
 
         mapTable
             .addRow('Alien Skill', '' + this.alienAbility)
-            .addRow('Alien Tokens', '' + this.alienToken)
+            .addRow('Alien Tokens/Planet', this.alienToken + "/" + this.alienTokenPlanet)
             .addRow('Close', '' + this.close.map(mapToSlackUserName))
             .addRow('Near', '' + this.near.map(mapToSlackUserName))
             .addRow('Far', '' + this.far.map(mapToSlackUserName))
