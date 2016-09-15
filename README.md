@@ -73,12 +73,9 @@ You can run bit with "node app.js"
 ### Set map value
 
     Adjusts the map value for current channel.
-    Format is "set map (planet|mission|aa description|a description|aa|c|n|f|at) [value]"
+    Format is "set map (planet|mission|aa description|a description|aa|at) [value]"
 
     where
-        c - close range number of tokens
-        n - near range number of tokens
-        f - far range number of tokens
         aa - alien ability skill target value
         at - alien threat tokens number
         planet - text for planet description
@@ -92,17 +89,20 @@ You can run bit with "node app.js"
 ### Add map value
 
     Adjusts the map value for current channel.
-    Format is "map (aa|c|n|f|at) [positive or negative int]"
+    Format is "map (aa|at) [positive or negative int]"
     Ex. "map c +2" or "map at -5"
 
     where
-        c - close range number of tokens
-        n - near range number of tokens
-        f - far range number of tokens
         aa - alien ability skill target value
         at - alien threat tokens number
 
         [value] - new value of property
+
+### Move character to map range
+
+    Moves character to specific range
+    Format is "move (f|far|n|near|c|close) @username"
+    Ex. "move c @arnoid"
 
 ### Create character
 

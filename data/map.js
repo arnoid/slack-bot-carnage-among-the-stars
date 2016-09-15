@@ -41,7 +41,7 @@ var Map = class Map {
 
     moveCharacterToRange(characterName, rangeName) {
 
-        var filter = function (item){
+        var filter = function (item) {
             return item !== characterName
         };
 
