@@ -1,6 +1,6 @@
 var Item = require('../data/item.js')
 
-var regex = /^(items|item)\slist$/;
+var regex = /^(items|item)\slist(\sweapons)?$/;
 
 var tag = "ITEMS LIST:"
 
@@ -13,9 +13,14 @@ module.exports = {
     process: function (message) {
         console.log(tag, message.text);
 
-        var allItems = Item.loadAll();
+        var weaponsOnly = false;
+        var param = message.text.match(regex)[2]
 
-        console.log(allItems)
+        if(typeof param !== 'undefined') {
+            weaponsOnly = true
+        }
+
+        var allItems = Item.loadAll(weaponsOnly);
 
         return "<@" + message.user + ">: \n" + "```" + allItems.toString() + "```";
     },

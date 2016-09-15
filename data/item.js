@@ -58,7 +58,7 @@ var Item = class Item {
     }
 }
 
-var loadAll = function loadAll() {
+var loadAll = function loadAll(weaponsOnly) {
     try {
         var jsonfile = require('jsonfile')
         var itemsFile = require('path').dirname(require.main.filename) + '/content/items.json';
@@ -83,21 +83,26 @@ var loadAll = function loadAll() {
             var table = new AsciiTable('Items')
 
             table.setHeading('', '[*]', '**Close**', '**Near**', '**Far**')
+            weaponsOnly
+            this.forEach(function (item) {
+                // if (typeof this[param] === 'object') {
 
-            var itemParams = Object.keys(this);
+                var profile = item.profiles.basic;
 
-            for (var i in itemParams) {
-                var param = itemParams[i];
-
-                if (typeof this[param] === 'object') {
-
-                    var item = this[param];
-                    var profile = item.profiles.basic;
-
-                    console.log(item.title)
+                if(weaponsOnly) {
+                    if(profile.close === '-' &&
+                        profile.near === '-' &&
+                        profile.far === '-') {
+                        //ignore non-weapon
+                    } else {
+                        table.addRow(item.title, (item.singleUse ? '[*]' : '[ ]'), profile.close, profile.near, profile.far)
+                    }
+                } else {
                     table.addRow(item.title, (item.singleUse ? '[*]' : '[ ]'), profile.close, profile.near, profile.far)
                 }
-            }
+
+                // }
+            })
 
             return table.toString()
         }
