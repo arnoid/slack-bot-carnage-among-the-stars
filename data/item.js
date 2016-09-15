@@ -7,6 +7,7 @@ var Item = class Item {
         this.description = "";
         this.upgradable = false
         this.profiles = {}
+        this.rank = 0;
     }
 
     fromJson(json) {
@@ -14,6 +15,7 @@ var Item = class Item {
         this.title = json.title;
         this.description = json.description;
         this.upgradable = json.upgradable
+        this.rank = json.rank
 
         if (typeof json.profiles !== 'undefined') {
             var keys = Object.keys(json.profiles);

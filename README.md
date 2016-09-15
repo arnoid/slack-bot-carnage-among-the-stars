@@ -40,26 +40,26 @@ You can run bit with "node app.js"
 
     Short version:
 
-    .-------------------.
-    |        Map        |
-    |-------------------|
-    | Alien Skill  | 20 |
-    | Alien Tokens | 10 |
-    | Close        | 10 |
-    | Near         | 10 |
-    | Far          | 10 |
-    '-------------------'
+    .-------------------------------.
+    |              Map              |
+    |-------------------------------|
+    | Alien Skill         | 20      |
+    | Alien Tokens/Planet | 10/1000 |
+    | Close               | @arnoid |
+    | Near                | @zwolf  |
+    | Far                 | @grb    |
+    '-------------------------------'
 
     Long version:
-    .-------------------.
-    |        Map        |
-    |-------------------|
-    | Alien Skill  | 20 |
-    | Alien Tokens | 10 |
-    | Close        | 10 |
-    | Near         | 10 |
-    | Far          | 10 |
-    '-------------------'
+    .-------------------------------.
+    |              Map              |
+    |-------------------------------|
+    | Alien Skill         | 20      |
+    | Alien Tokens/Planet | 10/1000 |
+    | Close               | @arnoid |
+    | Near                | @zwolf  |
+    | Far                 | @grb    |
+    '-------------------------------'
     *Mission*
     mission description
     *Planet*
@@ -78,6 +78,7 @@ You can run bit with "node app.js"
     where
         aa - alien ability skill target value
         at - alien threat tokens number
+        atp - alien threat tokens number for planet
         planet - text for planet description
         mission - text for planet mission description
         aa description - alien ability description description, something like armored, invincible and other stuff.
@@ -95,6 +96,7 @@ You can run bit with "node app.js"
     where
         aa - alien ability skill target value
         at - alien threat tokens number
+        atp - alien threat tokens number for planet
 
         [value] - new value of property
 
@@ -202,7 +204,9 @@ You can run bit with "node app.js"
 ### List items
 
     Prints the list of ALL possible items with basic damage profile stats.
-    Format "(items|item) list"
+    Format "(items|item) list (weapons) (ranked)".
+    "weapons" modificator is optional and lists damaging items only.
+    "ranked" modificator is optional and lists items available to your rank and below only.
 
     Example output:
     .----------------------------------------------------------.

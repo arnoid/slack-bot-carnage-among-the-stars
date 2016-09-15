@@ -546,5 +546,245 @@
     "rank": 5,
     "singleUse": false,
     "upgradable": true
+  },
+  {
+    "title": "DROP SHIP",
+    "description": "The Drop Ship is a space-to-surface landing craft, bristling with weapons and capable of carrying many Troopers into battle. You can use it as much as you like in missions until it is destroyed.\n\nOne PC is designated as the Commander. That PC rolls on NFA for the Drop Ship in the Combat Sequence, and it causes d10 Kills at any range. The Drop Ship is Crippled if it takes a kill and destroyed if it takes another kill. It can be repaired between encounters. It also provides an extra Armour tick for anyone inside. Obviously, when inside the Drop Ship all PCs are at the same range. Anyone can choose to leave the Drop Ship on their turn, and they are placed at the range that the Drop Ship is at when they exit.",
+    "profiles": {
+      "basic": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      }
+    },
+    "rank": 5,
+    "singleUse": false,
+    "upgradable": false
+  },
+  {
+    "title": "DROP PODS",
+    "description": "Gives the PCs an automatic Ambush for a planet’s first encounter. Drop Pods are destroyed if you lose this first encounter or use an E-Vac or Orbital Bombardment in the encounter.",
+    "profiles": {
+      "basic": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      }
+    },
+    "rank": 3,
+    "singleUse": false,
+    "upgradable": false
+  },
+  {
+    "title": "THE APC",
+    "description": "The APC is a ground-based Armoured Personnel Carrier festooned with gun ports, smoke launchers and a turret-mounted chaingun. It can automatically change range each turn if desired.\n\nOne PC is designated as the driver. That PC rolls on NFA for the APC in the Combat Sequence, and it causes d6 Kills at any range.\n\nIf the APC takes a kill then it is Crippled (but can be repaired between encounters). When Crippled the driver and Troopers inside usually disembark. If abandoned like this the APC is not targeted any further by the aliens and can be rescued at the end of the encounter as long as the PCs win the fight.\n\nIf it continues to be used and takes a further kill then it is destroyed and anyone still inside takes a kill. A destroyed APC is no longer available for future missions.\n\nCharacters in the APC are immune to kills as long as the APC is undamaged.\n\nObviously, everyone inside the APC is at the same range. Anyone can choose to leave the APC on their turn, and they are placed at the range that the APC is at when they exit the vehicle.",
+    "profiles": {
+      "basic": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      }
+    },
+    "rank": 4,
+    "singleUse": true,
+    "upgradable": false
+  },
+  {
+    "title": "STARKILLER",
+    "description": "The 3:16 has a limited number of Starkiller missiles. These obliterate star systems that are deemed too dangerous to assault directly. The Starkiller collapses the target star and sends it supernova.\n\nThe player declares that their PC is using a Starkiller at the Mission Briefing and marks the planet choice off the list. They describe what happened and add [d1000 × 10] Kills to their Total Kills and gain a medal. The Mission Briefing for a new planet then follows. The PC starts the new mission with 0 Kills This Mission.",
+    "profiles": {
+      "basic": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      }
+    },
+    "rank": 7,
+    "singleUse": true,
+    "upgradable": false
+  },
+  {
+    "title": "THE DEVICE",
+    "description": "The Device is the weapon of last resort for the Brigadier. When activated it will turn d10 parsecs of space centred on the Brigade’s ships into a rich star-forming region. The effect is that it will destroy the Brigade, the local star and 2d6 surrounding star systems.\n\nThis has one use only. Don’t count the kills, it ends the game.\n\nThe Game Master should never have the Brigadier use this weapon. Should a PC become the Brigadier they may use it if they wish.",
+    "profiles": {
+      "basic": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      }
+    },
+    "rank": 8,
+    "singleUse": true,
+    "upgradable": false
+  },
+  {
+    "title": "KINETIC FIELD ARMOUR",
+    "description": "Officers of the rank of Major and above have Skull “pips” on their insignia. This skull hosts a Kinetic Field Armour transmitter, which allows the Officer to avoid kills in any one encounter on a planet.\n\nThey simply declare at the start of an encounter that they are using their Kinetic Field Armour and they will be immune from any weapons that can be stopped with Armour for that whole encounter.",
+    "profiles": {
+      "basic": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      }
+    },
+    "rank": 5,
+    "singleUse": true,
+    "upgradable": false
+  },
+  {
+    "title": "TPK BOMB",
+    "description": "A localized nuclear bomb in simple-to-use grenade form.\n*SPECIAL EFFECT: The TPK Bomb causes 1 Kill to every PC in the encounter at Close Range, including the user. Total up how many PCs have taken a kill. That is the number of Threat Tokens removed. For each Threat Token removed the TPK Bomb yields d100 Kills. So 4 Threat Tokens removed gives 4 separate d100 rolls added together. Armour cannot protect against these kills.",
+    "profiles": {
+      "basic": {
+        "close": "d100*",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "d100*",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "d100*",
+        "near": "-",
+        "far": "-"
+      }
+    },
+    "rank": 4,
+    "singleUse": true,
+    "upgradable": false
+  },
+  {
+    "title": "PARADISE BOMB",
+    "description": "A non-localized nuclear bomb in easy-to-use grenade form.\n*SPECIAL EFFECT: The Paradise Bomb causes 1 Kill to every PC in the encounter, including the user. Total up how many PCs have taken a kill. That is the number of Threat Tokens removed. For each Threat Token removed the Paradise Bomb yields d100 Kills. So 4 Threat Tokens removed gives 4 separate d100 rolls added together. Armour cannot protect against these kills.",
+    "profiles": {
+      "basic": {
+        "close": "d100*",
+        "near": "d100*",
+        "far": "d100*"
+      },
+      "current": {
+        "close": "d100*",
+        "near": "d100*",
+        "far": "d100*"
+      },
+      "best": {
+        "close": "d100*",
+        "near": "d100*",
+        "far": "d100*"
+      }
+    },
+    "rank": 6,
+    "singleUse": true,
+    "upgradable": false
+  },
+  {
+    "title": "ORBITAL BOMBARDMENT",
+    "description": "This is where the planet is shelled from space by the support vehicles of the Brigade. It is a desperate and bloody measure.\n\nEvery enemy on the planet is killed and ALL the PCs take a Kill for their troubles. The Orbital Bombardment ignores any Armour, so this will automatically turn any PC into, at best, a Mess and possibly render some of them dead if they were already Crippled.\n\nThis damage can be avoided with the use of a Strength or Weakness, if the PC has one available and is willing to use it. To call in an Orbital Bombardment the PC must be an Officer (Rank 3 and above). It is called in with a success on NFA on the Officer’s turn. Failure means the call fails, but it is still available next turn.\n\nAfter the mission more senior officers will grill the character on why they called in the Orbital Bombardment. A test of NFA must be successful to avoid demotion of 1 rank. It is not possible for the Officer who called in the strike to be promoted for this mission. Note that the Officer is awarded d1000 kills to their total, though. \n\nIf the same player calls in an Orbital Bombardment on another planet in the future it automatically kills their PC. Hubris is a bitch. A player cannot ever use Orbital Bombardment more than twice.",
+    "profiles": {
+      "basic": {
+        "close": "d1000*",
+        "near": "d1000*",
+        "far": "d1000*"
+      },
+      "current": {
+        "close": "d1000*",
+        "near": "d1000*",
+        "far": "d1000*"
+      },
+      "best": {
+        "close": "d1000*",
+        "near": "d1000*",
+        "far": "d1000*"
+      }
+    },
+    "rank": 3,
+    "singleUse": true,
+    "upgradable": false
+  },
+  {
+    "title": "E-VAC",
+    "description": "[HIGHEST RANK ALIVE ONLY; ENDS COMBAT\nThis is where the Troopers are all evacuated from combat before it ends. Drop ships and pods swoop down to spirit the PCs awaywhile mopping up any remaining alien resistance at the site. \n\nAn extreme measure and only able to be called in by a PC who is of the highest rank in the group (NPCs do not count as part of the group). So this strictly means that the highest ranking (joint highest, even) PC is the only one able to call on this support item.\n\nTo succeed the PC must be successful on a roll of NFA as part of the combat sequence. Only one PC can call on it at a time. \n\nIf successful then all the Threat Tokens from this encounter are discarded by the GM. If it is the final encounter then the planet is considered to be completed as there is no Threat remaining. \n\nAll PCs take a Kill, which Armour can prevent if they have it available. Strengths and Weaknesses can also be used if desired. Should the PC fail on the NFA roll then the E-Vac is still available on future turns. Of course, that PC may die this turn and it will be up to a new Highest Rank Alive PC to call in the E-Vac next turn. \n\nLife is shit sometimes, for sure, and this is often the only way out.",
+    "profiles": {
+      "basic": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "current": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      },
+      "best": {
+        "close": "-",
+        "near": "-",
+        "far": "-"
+      }
+    },
+    "rank": 1,
+    "singleUse": true,
+    "upgradable": false
   }
 ]
